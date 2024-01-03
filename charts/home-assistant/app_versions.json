@@ -573,7 +573,7 @@
                         "default": "4000m"
                     }
                 },
-                  {
+                {
                     "variable": "deviceList",
                     "label": "Mount USB Devices",
                     "group": "Resources and Devices",
@@ -635,7 +635,8 @@
                                 }
                             }
                         ]
-                    },
+                    }
+                },
                 {
                     "variable": "memLimit",
                     "label": "Memory Limit",
