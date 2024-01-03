@@ -576,7 +576,7 @@
                 {
                     "variable": "deviceList",
                     "label": "Mount USB Devices",
-                    "group": "Resources Limits",
+                    "group": "Resource Limits",
                     "schema": {
                         "type": "list",
                         "default": [],
