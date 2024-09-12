@@ -1,16 +1,16 @@
 {
-    "1.2.5": {
+    "1.2.13": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/qbittorrent/1.2.5",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/qbittorrent/1.2.13",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
-            "normalize/ixVolume",
-            "normalize/acl"
+            "normalize/acl",
+            "normalize/ixVolume"
         ],
-        "human_version": "4.6.2_1.2.5",
-        "version": "1.2.5",
+        "human_version": "4.6.6_1.2.13",
+        "version": "1.2.13",
         "chart_metadata": {
             "name": "qbittorrent",
             "description": "The qBittorrent project aims to provide an open-source software alternative to \u00b5Torrent.",
@@ -18,9 +18,9 @@
                 "title": "qBittorrent"
             },
             "type": "application",
-            "version": "1.2.5",
+            "version": "1.2.13",
             "apiVersion": "v2",
-            "appVersion": "4.6.2",
+            "appVersion": "4.6.6",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -33,7 +33,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://www.qbittorrent.org/",
@@ -207,6 +207,15 @@
                                     "min": 9000,
                                     "max": 65535,
                                     "required": true
+                                }
+                            },
+                            {
+                                "variable": "useHttpsProbe",
+                                "label": "Use HTTPS Probe",
+                                "description": "Use HTTPS probe for the qBittorrent Web UI. </br>\nThis will ONLY affect the probes, only enable this if you\nconfigured HTTPS in the qBittorrent Web UI.\n",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": false
                                 }
                             },
                             {

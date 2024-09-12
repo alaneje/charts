@@ -1,13 +1,13 @@
 {
-    "1.0.28": {
+    "1.0.45": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/tailscale/1.0.28",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/tailscale/1.0.45",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [],
-        "human_version": "1.56.1_1.0.28",
-        "version": "1.0.28",
+        "human_version": "1.72.1_1.0.45",
+        "version": "1.0.45",
         "chart_metadata": {
             "name": "tailscale",
             "description": "Secure remote access to shared resources",
@@ -15,9 +15,9 @@
                 "title": "Tailscale"
             },
             "type": "application",
-            "version": "1.0.28",
+            "version": "1.0.45",
             "apiVersion": "v2",
-            "appVersion": "1.56.1",
+            "appVersion": "1.72.1",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -30,7 +30,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://tailscale.com/",
@@ -157,6 +157,15 @@
                                 "variable": "acceptDns",
                                 "label": "Accept DNS",
                                 "description": "Accept DNS.</br>\nSame as `--accept-dns` flag.\n",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            },
+                            {
+                                "variable": "authOnce",
+                                "label": "Auth Once",
+                                "description": "Attempt to log in only if not already logged in.</br>\n",
                                 "schema": {
                                     "type": "boolean",
                                     "default": false

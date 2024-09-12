@@ -1,17 +1,17 @@
 {
-    "1.2.0": {
+    "1.2.18": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/minecraft/1.2.0",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/minecraft/1.2.18",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
+            "normalize/acl",
             "definitions/timezone",
-            "normalize/ixVolume",
-            "normalize/acl"
+            "normalize/ixVolume"
         ],
-        "human_version": "2023.12.2_1.2.0",
-        "version": "1.2.0",
+        "human_version": "2024.9.0_1.2.18",
+        "version": "1.2.18",
         "chart_metadata": {
             "name": "minecraft",
             "description": "Minecraft is a sandbox game",
@@ -19,9 +19,9 @@
                 "title": "Minecraft"
             },
             "type": "application",
-            "version": "1.2.0",
+            "version": "1.2.18",
             "apiVersion": "v2",
-            "appVersion": "2023.12.2",
+            "appVersion": "2024.9.0",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -34,7 +34,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://www.minecraft.net/en-us",
@@ -152,7 +152,7 @@
                                 "description": "The image to use for Minecraft.</br>\nDepending on the image you select, you might\nneed to adjust the Version and Type fields.\n",
                                 "schema": {
                                     "type": "string",
-                                    "default": "j17Image",
+                                    "default": "j21Image",
                                     "required": true,
                                     "enum": [
                                         {
@@ -206,6 +206,18 @@
                                         {
                                             "value": "j19Image",
                                             "description": "Java 19 HotSpot (Ubuntu)"
+                                        },
+                                        {
+                                            "value": "j21Image",
+                                            "description": "Java 21 HotSpot (Ubuntu)"
+                                        },
+                                        {
+                                            "value": "j21gImage",
+                                            "description": "Java 21 GraalVM (Oracle)"
+                                        },
+                                        {
+                                            "value": "j21alpineImage",
+                                            "description": "Java 21 HotSpot (Alpine)"
                                         }
                                     ]
                                 }
@@ -232,64 +244,36 @@
                                             "description": "Bukkit"
                                         },
                                         {
-                                            "value": "FORGE",
-                                            "description": "Forge"
+                                            "value": "PAPER",
+                                            "description": "Paper"
                                         },
                                         {
-                                            "value": "CATSERVER",
-                                            "description": "CatServer"
-                                        },
-                                        {
-                                            "value": "CRUCIBLE",
-                                            "description": "Crucible"
-                                        },
-                                        {
-                                            "value": "AUTO_CURSEFORGE",
-                                            "description": "Auto CurseForge"
-                                        },
-                                        {
-                                            "value": "CUSTOM",
-                                            "description": "Custom"
+                                            "value": "FOLIA",
+                                            "description": "Folia"
                                         },
                                         {
                                             "value": "FABRIC",
                                             "description": "Fabric"
                                         },
                                         {
-                                            "value": "FTBA",
-                                            "description": "Feed The Beast"
-                                        },
-                                        {
                                             "value": "FORGE",
                                             "description": "Forge"
                                         },
                                         {
-                                            "value": "LOLISERVER",
-                                            "description": "LoliServer"
+                                            "value": "NEOFORGE",
+                                            "description": "NeoForge"
                                         },
                                         {
-                                            "value": "LIMBO",
-                                            "description": "Limbo"
-                                        },
-                                        {
-                                            "value": "MAGMA",
-                                            "description": "Magma"
+                                            "value": "AUTO_CURSEFORGE",
+                                            "description": "CurseForge"
                                         },
                                         {
                                             "value": "MODRINTH",
                                             "description": "Modrinth"
                                         },
                                         {
-                                            "value": "MOHIST",
-                                            "description": "Mohist"
-                                        },
-                                        {
-                                            "value": "FABRIC",
-                                            "description": "Fabric"
-                                        },
-                                        {
-                                            "value": "PAPER",
-                                            "description": "Paper"
+                                            "value": "FTBA",
+                                            "description": "Feed the Beast"
                                         },
                                         {
                                             "value": "PUFFERFISH",
@@ -304,8 +288,40 @@
                                             "description": "Quilt"
                                         },
                                         {
+                                            "value": "MAGMA",
+                                            "description": "Magma"
+                                        },
+                                        {
+                                            "value": "MAGMA_MAINTAINED",
+                                            "description": "Magma Maintained"
+                                        },
+                                        {
+                                            "value": "KETTING",
+                                            "description": "Ketting"
+                                        },
+                                        {
+                                            "value": "MOHIST",
+                                            "description": "Mohist"
+                                        },
+                                        {
+                                            "value": "CATSERVER",
+                                            "description": "Catserver"
+                                        },
+                                        {
                                             "value": "SPONGEVANILLA",
                                             "description": "SpongeVanilla"
+                                        },
+                                        {
+                                            "value": "LIMBO",
+                                            "description": "Limbo"
+                                        },
+                                        {
+                                            "value": "CRUCIBLE",
+                                            "description": "Crucible"
+                                        },
+                                        {
+                                            "value": "CUSTOM",
+                                            "description": "Custom"
                                         }
                                     ]
                                 }

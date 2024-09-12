@@ -16,6 +16,24 @@ def newer_mapping(image_tags):
     if not version:
         return {}
 
+    parts = version.split('.')
+
+    # Versioning scheme:
+    # Must be x.y.z
+    # Second part has leading 0 if not 0
+    # Third part does not have leading 0
+
+    # Below we make sure the above conditions are met
+    # as the semantic_versioning function modifies the version
+
+    if len(parts) < 3:
+        return {}
+
+    if parts[1] != '0':
+        parts[1] = '0' + parts[1]
+
+    version = '.'.join(parts)
+
     return {
         'tags': {key: tags[version]},
         'app_version': version,

@@ -1,18 +1,18 @@
 {
-    "3.0.2": {
+    "4.0.15": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/immich/3.0.2",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/immich/4.0.15",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
+            "normalize/acl",
             "definitions/timezone",
             "normalize/ixVolume",
-            "normalize/acl",
             "definitions/gpuConfiguration"
         ],
-        "human_version": "1.91.4_3.0.2",
-        "version": "3.0.2",
+        "human_version": "1.114.0_4.0.15",
+        "version": "4.0.15",
         "chart_metadata": {
             "name": "immich",
             "description": "Immich is a self-hosted photo and video backup solution directly from your mobile phone.",
@@ -20,9 +20,9 @@
                 "title": "Immich"
             },
             "type": "application",
-            "version": "3.0.2",
+            "version": "4.0.15",
             "apiVersion": "v2",
-            "appVersion": "1.91.4",
+            "appVersion": "1.114.0",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -35,7 +35,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://immich.app",
@@ -141,21 +141,75 @@
                         "type": "dict",
                         "attrs": [
                             {
-                                "variable": "publicLoginMessage",
-                                "label": "Public Login Message",
-                                "description": "The message that will be displayed on the login page.\n",
-                                "schema": {
-                                    "type": "string",
-                                    "default": ""
-                                }
-                            },
-                            {
                                 "variable": "enableML",
                                 "label": "Enable Machine Learning",
                                 "description": "Enable Machine Learning\n",
                                 "schema": {
                                     "type": "boolean",
                                     "default": true
+                                }
+                            },
+                            {
+                                "variable": "mlImageType",
+                                "label": "Machine Learning Image Type",
+                                "description": "The type of image to use for Machine Learning.\n",
+                                "schema": {
+                                    "type": "string",
+                                    "default": "mlImage",
+                                    "enum": [
+                                        {
+                                            "value": "mlImage",
+                                            "description": "Default Machine Learning Image"
+                                        },
+                                        {
+                                            "value": "mlCudaImage",
+                                            "description": "Cuda Machine Learning Image"
+                                        },
+                                        {
+                                            "value": "mlOpenvinoImage",
+                                            "description": "Openvino Machine Learning Image"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "variable": "logLevel",
+                                "label": "Log Level",
+                                "description": "The log level to use for Machine Learning.\n",
+                                "schema": {
+                                    "type": "string",
+                                    "default": "log",
+                                    "enum": [
+                                        {
+                                            "value": "verbose",
+                                            "description": "Verbose"
+                                        },
+                                        {
+                                            "value": "debug",
+                                            "description": "Debug"
+                                        },
+                                        {
+                                            "value": "log",
+                                            "description": "Log"
+                                        },
+                                        {
+                                            "value": "warn",
+                                            "description": "Warn"
+                                        },
+                                        {
+                                            "value": "error",
+                                            "description": "Error"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "variable": "huggingFaceEndpoint",
+                                "label": "Hugging Face Endpoint (Optional)",
+                                "description": "The Hugging Face endpoint to use for Machine Learning.\n",
+                                "schema": {
+                                    "type": "string",
+                                    "default": ""
                                 }
                             }
                         ]
@@ -2926,6 +2980,40 @@
                             "definitions/gpuConfiguration"
                         ],
                         "attrs": []
+                    }
+                },
+                {
+                    "variable": "immichGPUContainers",
+                    "group": "Resources Configuration",
+                    "label": "GPU Containers",
+                    "description": "Select which containers should use GPU.",
+                    "schema": {
+                        "type": "dict",
+                        "show_if": [
+                            [
+                                "immichGPU",
+                                "!=",
+                                {}
+                            ]
+                        ],
+                        "attrs": [
+                            {
+                                "variable": "server",
+                                "label": "Enable GPU for Server",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            },
+                            {
+                                "variable": "machinelearning",
+                                "label": "Enable GPU for Machine Learning",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            }
+                        ]
                     }
                 }
             ]

@@ -1,16 +1,16 @@
 {
-    "1.2.6": {
+    "1.2.15": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/linkding/1.2.6",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/linkding/1.2.15",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
-            "normalize/ixVolume",
-            "normalize/acl"
+            "normalize/acl",
+            "normalize/ixVolume"
         ],
-        "human_version": "1.23.1_1.2.6",
-        "version": "1.2.6",
+        "human_version": "1.27.0_1.2.15",
+        "version": "1.2.15",
         "chart_metadata": {
             "name": "linkding",
             "description": "Linkding is a bookmark manager that you can host yourself.",
@@ -18,9 +18,9 @@
                 "title": "Linkding"
             },
             "type": "application",
-            "version": "1.2.6",
+            "version": "1.2.15",
             "apiVersion": "v2",
-            "appVersion": "1.23.1",
+            "appVersion": "1.27.0",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -33,7 +33,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://github.com/sissbruecker/linkding",
@@ -112,6 +112,26 @@
                     "schema": {
                         "type": "dict",
                         "attrs": [
+                            {
+                                "variable": "imageSelector",
+                                "label": "Image",
+                                "description": "The image to use for Linkding",
+                                "schema": {
+                                    "type": "string",
+                                    "default": "image",
+                                    "required": true,
+                                    "enum": [
+                                        {
+                                            "value": "image",
+                                            "description": "Normal Linkding image"
+                                        },
+                                        {
+                                            "value": "plusImage",
+                                            "description": "Plus Linkding image"
+                                        }
+                                    ]
+                                }
+                            },
                             {
                                 "variable": "username",
                                 "label": "Username",

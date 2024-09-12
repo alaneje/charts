@@ -1,17 +1,17 @@
 {
-    "1.1.8": {
+    "1.1.23": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/gitea/1.1.8",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/gitea/1.1.23",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
-            "normalize/ixVolume",
             "normalize/acl",
+            "normalize/ixVolume",
             "definitions/certificate"
         ],
-        "human_version": "1.21.3_1.1.8",
-        "version": "1.1.8",
+        "human_version": "1.22.2_1.1.23",
+        "version": "1.1.23",
         "chart_metadata": {
             "name": "gitea",
             "description": "Gitea - Git with a cup of tea",
@@ -19,9 +19,9 @@
                 "title": "Gitea"
             },
             "type": "application",
-            "version": "1.1.8",
+            "version": "1.1.23",
             "apiVersion": "v2",
-            "appVersion": "1.21.3",
+            "appVersion": "1.22.2",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -34,7 +34,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://gitea.io/en-us",
@@ -212,6 +212,18 @@
                                     "min": 9000,
                                     "max": 65535,
                                     "required": true
+                                }
+                            },
+                            {
+                                "variable": "externalSshPort",
+                                "label": "External SSH Port",
+                                "description": "The ssh port that Gitea will be available at externally.</br>\nLeave empty to use the same port as the ssh port.\n",
+                                "schema": {
+                                    "type": "int",
+                                    "null": true,
+                                    "default": null,
+                                    "min": 9000,
+                                    "max": 65535
                                 }
                             },
                             {

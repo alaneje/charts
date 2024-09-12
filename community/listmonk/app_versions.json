@@ -1,16 +1,16 @@
 {
-    "1.2.4": {
+    "1.2.8": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/listmonk/1.2.4",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/listmonk/1.2.8",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
-            "normalize/ixVolume",
-            "normalize/acl"
+            "normalize/acl",
+            "normalize/ixVolume"
         ],
-        "human_version": "v2.5.1_1.2.4",
-        "version": "1.2.4",
+        "human_version": "3.0.0_1.2.8",
+        "version": "1.2.8",
         "chart_metadata": {
             "name": "listmonk",
             "description": "Listmonk is a self-hosted newsletter and mailing list manager.",
@@ -18,9 +18,9 @@
                 "title": "Listmonk"
             },
             "type": "application",
-            "version": "1.2.4",
+            "version": "1.2.8",
             "apiVersion": "v2",
-            "appVersion": "v2.5.1",
+            "appVersion": "3.0.0",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -33,7 +33,7 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://listmonk.app/",

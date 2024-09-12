@@ -1,17 +1,17 @@
 {
-    "1.2.0": {
+    "1.2.9": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/unifi-protect-backup/1.2.0",
-        "last_update": "2024-01-03 08:01:08",
+        "location": "/__w/charts/charts/community/unifi-protect-backup/1.2.9",
+        "last_update": "2024-09-12 11:05:34",
         "required_features": [
+            "normalize/acl",
             "definitions/timezone",
-            "normalize/ixVolume",
-            "normalize/acl"
+            "normalize/ixVolume"
         ],
-        "human_version": "0.10.3_1.2.0",
-        "version": "1.2.0",
+        "human_version": "0.11.0_1.2.9",
+        "version": "1.2.9",
         "chart_metadata": {
             "name": "unifi-protect-backup",
             "description": "Unifi Protect Backup is a python based tool for backing up UniFi Protect event clips as they occur.",
@@ -19,9 +19,9 @@
                 "title": "Unifi Protect Backup"
             },
             "type": "application",
-            "version": "1.2.0",
+            "version": "1.2.9",
             "apiVersion": "v2",
-            "appVersion": "0.10.3",
+            "appVersion": "0.11.0",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -34,11 +34,11 @@
                 {
                     "name": "common",
                     "repository": "file://../../../common",
-                    "version": "1.2.6"
+                    "version": "1.2.9"
                 }
             ],
             "home": "https://github.com/ep1cman/unifi-protect-backup",
-            "icon": "https://media.sys.truenas.net/apps/unifi-protect-backup/icons/icon.png",
+            "icon": "https://media.sys.truenas.net/apps/unifi-protect-backup/icons/icon.svg",
             "sources": [
                 "https://github.com/ep1cman/unifi-protect-backup",
                 "https://github.com/truenas/charts/tree/master/community/unifi-protect-backup",
