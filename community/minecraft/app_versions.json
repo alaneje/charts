@@ -802,6 +802,18 @@
                                     "required": true
                                 }
                             },
+                             {
+                                "variable": "dynmapport",
+                                "label": "Dyn Map Port",
+                                "description": "The port for Dynmap.\n",
+                                "schema": {
+                                    "type": "int",
+                                    "default": 25536,
+                                    "min": 9000,
+                                    "max": 65535,
+                                    "required": false
+                                }
+                            },
                             {
                                 "variable": "rconPort",
                                 "label": "RCON Port",
